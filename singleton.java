@@ -1,18 +1,24 @@
 // Eager initialization
-class SingletonEager{
+class SingletonEager {
     private static SingletonEager instance = new SingletonEager();
-    private SingletonEager(){}
-    public static SingletonEager getInstance(){
+
+    private SingletonEager() {
+    }
+
+    public static SingletonEager getInstance() {
         return instance;
     }
 }
 
 // Lazy initialization
-class SingletonLazy{
+class SingletonLazy {
     private static SingletonLazy instance;
-    private SingletonLazy(){}
-    public static SingletonLazy getInstance(){
-        if(instance == null){
+
+    private SingletonLazy() {
+    }
+
+    public static SingletonLazy getInstance() {
+        if (instance == null) {
             instance = new SingletonLazy();
         }
         return instance;
@@ -29,7 +35,6 @@ public class singleton {
         // Lazy initialization
         SingletonLazy s1 = SingletonLazy.getInstance();
         SingletonLazy s2 = SingletonLazy.getInstance();
-        System.out.println(s1==s2);
+        System.out.println(s1 == s2);
     }
 }
-
